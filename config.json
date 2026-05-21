@@ -1,0 +1,23 @@
+{
+  "saved_devices": [],
+  "settings": {
+    "safe_mode": true,
+    "scan_timeout": 1.0,
+    "max_scan_ips": 50,
+    "auto_connect_adb": true,
+    "confirm_dangerous_actions": true,
+    "log_operations": true,
+    "theme": "dark",
+    "language": "es"
+  },
+  "network": {
+    "custom_gateway": null,
+    "scan_range": "24",
+    "exclude_ips": []
+  },
+  "backup": {
+    "default_path": "./backups",
+    "max_backups": 5,
+    "auto_backup": false
+  }
+}
