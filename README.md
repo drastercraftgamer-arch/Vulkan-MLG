@@ -1,210 +1,109 @@
+# 🌋 VULKAN-MLG v12.0
 
-##                       "VULKAN-MLG v12.0 - GUÍA COMPLETA"
+> Una herramienta para administrar dispositivos Android y PC en una red local.
+> 
+> *"La inventé solo porque quería tener un programa para controlar las redes y los dispositivos de mi hogar... ¿Por qué no crear un programa para tener control casi total?"*
 
+⚠️ **SOLO para uso en DISPOSITIVOS PROPIOS o con AUTORIZACIÓN EXPLÍCITA.**
 
-## **📌 ¿QUÉ ES VULKAN-MLG?**
+---
 
-Es una herramienta para administrar dispositivos Android y PC en una 
-red local. Permite escanear dispositivos, explorar archivos, ejecutar comandos 
-ADB y controlar un teléfono Android. La inventé solo porque quería tener un 
-programa para controlar las redes y los dispositivos de mi hogar...
-Si, podía usar cosas como la sincronización ocn mi PC o el ftp si quería pasar
-archivos. Pero... ¿Por que no crear un programa para tener control casi total?
+## 📌 ¿Qué es VULKAN-MLG?
 
-⚠️ SOLO para uso en DISPOSITIVOS PROPIOS o con AUTORIZACIÓN EXPLÍCITA.
+Es una herramienta que permite:
+- Escanear dispositivos en tu red local
+- Explorar archivos (tanto de PC como de Android)
+- Ejecutar comandos ADB
+- Controlar un teléfono Android (con su permiso)
 
-## 📋 FUNCIÓN DE CADA ARCHIVO 
+> Podía usar cosas como la sincronización con mi PC o FTP para pasar archivos... pero ¿dónde está la diversión?
 
---------------------- ARCHIVOS PRINCIPALES ---------------------
+---
 
-📄 main.py
-   → Inicia la aplicación. Crea la ventana principal y carga la interfaz.
-   → Configura el tamaño, título y eventos de cierre.
+## 🚀 ¿Qué ofrece la aplicación?
 
-📄 Iniciar.bat
-   → Script para Windows. Verifica Python, busca ADB y ejecuta main.py.
+### 1. 📡 Pestaña DISPOSITIVOS
+- ✅ Escanear red completa
+- ✅ Ver IP, MAC, nombre y tipo de cada dispositivo
+- ✅ Detectar automáticamente Android (puerto 5555)
+- ✅ Seleccionar dispositivo objetivo
+- ✅ Guardar dispositivos favoritos
 
-📄 Configurar.bat
-   → Instala dependencias (scapy, pillow) y crea carpetas necesarias.
+### 2. 🎮 Pestaña CONTROL
+- ✅ Ver pantalla del Android (scrcpy)
+- ✅ Abrir cámara
+- ✅ Grabar video
+- ✅ Explorar archivos del dispositivo
+- ✅ Bloquear/Desbloquear dispositivo (ARP spoofing)
+- ✅ Modo persistente (bloqueo continuo)
+- ✅ Enviar notificaciones al Android (no sé si funciona 🤷)
+- ✅ Abrir URLs en el navegador
+- ✅ Controles: INICIO, ATRÁS, VOLUMEN
+- ✅ Ver información del dispositivo
+- ✅ Desconectar dispositivo
 
-📄 config.json
-   → Guarda configuración: dispositivos favoritos, ajustes de red, backups.
+### 3. 🕵️ Pestaña "ESPIONAJE" (que no es espionaje)
+- ✅ Foto stealth (toma foto sin avisar)
+- ✅ Grabación de micrófono remota
+- ✅ Obtener GPS con enlace a Google Maps
+- ✅ Extraer contactos (archivo CSV)
+- ✅ Extraer SMS (archivo CSV)
+- ✅ Listar aplicaciones instaladas
+- ✅ Limpiar evidencia
 
---------------------- CARPETA core/ ---------------------
+### 4. ⚔️ Pestaña ATAQUES
+- ✅ ARP Spoofing real (bloquea dispositivo de la red)
+- ✅ Detener ataque y restaurar red
+- ✅ Modo persistente avanzado
+- ✅ Restaurar todo
 
-📄 vulkan_core.py
-   → El CEREBRO del programa. Coordina todas las funciones:
-     - Escanear red
-     - Conectar a dispositivos Android
-     - Ejecutar comandos ADB
-     - Control de ataques
-     - Llamar a herramientas de espionaje
+### 5. 💾 Pestaña BACKUPS
+- ✅ Seleccionar carpeta de destino
+- ⚠️ Backup completo (EN DESARROLLO CTM!!)
+- ⚠️ Backup de contactos y SMS (EN DESARROLLO)
+- ⚠️ Backup de apps (EN DESARROLLO)
+- ⚠️ Backup de fotos/videos (EN DESARROLLO)
 
-📄 network_scanner.py
-   → Escáner de red. Detecta dispositivos conectados al WiFi.
-   → Usa ping para encontrar IPs activas y detecta si son Android por puerto 5555.
+### 6. 💻 Pestaña CONSOLA
+- ✅ Ejecutar comandos ADB manualmente
+- ✅ Ver logs en tiempo real
+- ✅ Comandos peligrosos requieren confirmación
 
-📄 adb_controller.py
-   → Controlador ADB. Maneja la comunicación con Android:
-     - Conectar/desconectar dispositivos
-     - Enviar comandos shell
-     - Abrir cámara, URLs, notificaciones
-     - Iniciar scrcpy
+---
 
-📄 arp_spoofer.py
-   → ARP Spoofing. Intercepta el tráfico de red de un dispositivo.
-   → Requiere permisos de administrador. SOLO para pruebas en red propia.
+## 🔧 Cómo configurar todo (paso a paso)
 
-📄 security_manager.py
-   → Gestor de seguridad (opcional). Registra operaciones "peligrosas".
+### Paso 1: Instalar Python
+1. Ve a [python.org](https://python.org)
+2. Descarga Python 3.7 o superior
+3. Instálalo y **marca "Add to PATH"**
+4. Verifica: `python --version`
 
---------------------- CARPETA ui/ ---------------------
+### Paso 2: ADB y scrcpy
+> **¡Ya vienen incluidos en el proyecto CTM!** Pero si no:
 
-📄 modern_ui.py
-   → INTERFAZ VISUAL. Crea todas las pestañas:
-     - DISPOSITIVOS: lista de equipos en la red
-     - CONTROL: botones para manejar el Android
-     - ESPIONAJE: herramientas de espionaje (foto, GPS, etc.)
-     - ATAQUES: ARP spoofing y bloqueos
-     - BACKUPS: respaldo de datos
-     - CONSOLA: comandos ADB manuales
+**ADB:**
+- Descarga de [developer.android.com](https://developer.android.com/studio/releases/platform-tools)
+- Extrae y copia a la carpeta `Adb/`
 
-📄 styles.py
-   → ESTILOS Y TEMAS. Define colores, fuentes y efectos visuales.
+**Scrcpy:**
+- Descarga de [github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy/releases)
+- Copia `scrcpy.exe` a `Adb/`
 
---------------------- CARPETA tools/ ---------------------
+### Paso 3: Configurar el móvil Android
+1. Ve a Configuración → Acerca del teléfono
+2. Toca "Número de compilación" 7 veces (activa Opciones de Desarrollador)
+3. Ve a Opciones de Desarrollador
+4. Activa **"Depuración USB"**
+5. Activa **"Depuración USB (seguridad)"** si existe
+6. Conecta el móvil por USB
+7. En el móvil, **ACEPTA la huella RSA**
+8. Para usar por WiFi:
+   ```bash
+   adb tcpip 5555
+   adb connect IP_DEL_MÓVIL:5555
 
-📄 file_explorer.py
-   → EXPLORADOR DE ARCHIVOS DUAL.
-     - Modo PC: navega por tu computadora
-     - Modo Android: navega por el teléfono (requiere ADB)
-     - Funciones: copiar, pegar, eliminar, crear carpetas, subir/bajar archivos
-
-📄 spy_tools.py
-   → HERRAMIENTAS DE "ESPIONAJE" (requieren Android conectado):
-     - FOTO STEALTH: toma foto sin que el usuario sepa
-     - GRABAR MICRÓFONO: graba audio por X segundos
-     - OBTENER GPS: coordenadas y enlace a Google Maps
-     - EXTRAER CONTACTOS: guarda contactos en CSV
-     - EXTRAER SMS: guarda mensajes en CSV
-     - APPS INSTALADAS: lista todas las apps
-     - LIMPIAR EVIDENCIA: borra archivos temporales creados
-
---------------------- CARPETA utils/ ---------------------
-
-📄 logger.py
-   → SISTEMA DE LOGS. Muestra mensajes con timestamp en la consola.
-   → Colores: CYAN (info), GREEN (éxito), RED (error), YELLOW (advertencia)
-
-📄 config.py
-   → GESTOR DE CONFIGURACIÓN. Guarda y carga ajustes desde config.json.
-
-
-
-## 🚀 ¿QUÉ OFRECE LA APLICACIÓN? 
-
-
-1. 📡 PESTAÑA DISPOSITIVOS
-   ✅ Escanear red completamente
-   ✅ Ver IP, MAC, nombre y tipo de cada dispositivo
-   ✅ Detectar automáticamente Android (puerto 5555)
-   ✅ Seleccionar dispositivo objetivo
-   ✅ Guardar dispositivos favoritos
-
-2. 🎮 PESTAÑA CONTROL
-   ✅ Ver pantalla del Android (scrcpy)
-   ✅ Abrir cámara
-   ✅ Grabar video
-   ✅ Explorar archivos del dispositivo
-   ✅ Bloquear/Desbloquear dispositivo (ARP spoofing)
-   ✅ Modo persistente (bloqueo continuo)
-   ✅ Enviar notificaciones al Android (Esta wea no creo que funcione...)
-   ✅ Abrir URLs en el navegador del Android
-   ✅ Controles básicos: INICIO, ATRÁS, VOLUMEN
-   ✅ Ver información del dispositivo (modelo, Android, batería)
-   ✅ Desconectar dispositivo
-
-3. 🕵️ PESTAÑA DE ESPIONAJE QUE NO ES ESPIONAJE
-   ✅ Foto stealth (toma foto sin avisar)
-   ✅ Grabación de micrófono remota
-   ✅ Obtener GPS con enlace a Google Maps
-   ✅ Extraer todos los contactos (archivo CSV)
-   ✅ Extraer todos los SMS (archivo CSV)
-   ✅ Listar aplicaciones instaladas
-   ✅ Limpiar evidencia (borra archivos creados)
-
-4. ⚔️ PESTAÑA ATAQUES
-   ✅ ARP Spoofing real (bloquea dispositivo de la red)
-   ✅ Detener ataque y restaurar red
-   ✅ Modo persistente avanzado
-   ✅ Restaurar todo (detiene todos los ataques)
-
-5. 💾 PESTAÑA BACKUPS
-   ✅ Seleccionar carpeta de destino
-   ✅ Backup completo (EN DESARROLLO CTM!!)
-   ✅ Backup de contactos y SMS (EN DESARROLLO CTM!!)
-   ✅ Backup de apps (EN DESARROLLO CTM!!)
-   ✅ Backup de fotos/videos (EN DESARROLLO CTM!!)
-
-6. 💻 PESTAÑA CONSOLA
-   ✅ Ejecutar comandos ADB manualmente
-   ✅ Ver logs en tiempo real
-   ✅ Comandos peligrosos requieren confirmación
-
-
-
-## 🔧 CÓMO CONFIGURAR TODO (PASO A PASO)
-
-
-PASO 1: INSTALAR PYTHON
-------------------------
-Si no tienes Python:
-  1. Ve a python.org
-  2. Descarga Python 3.7 o superior
-  3. Instálalo. MARCA "Add to PATH"
-  4. Verifica: Abre CMD y escribe "python --version"
-
-PASO 2: DESCARGAR ADB Y SCRCPY (Si de alguna manera no lo tienes... ¡YA VIENE CON EL PROYECTO CTM!)
-------------------------------
-ADB (Android Debug Bridge):
-  1. Ve a developer.android.com/studio/releases/platform-tools
-  2. Descarga el ZIP para Windows
-  3. Extrae los archivos
-  4. Copia TODOS los archivos a la carpeta "Adb/" de este proyecto
-
-Scrcpy (ver pantalla del móvil):
-  1. Ve a github.com/Genymobile/scrcpy/releases
-  2. Descarga scrcpy-win64-v2.x.zip
-  3. Extrae scrcpy.exe y scrcpy-noconsole.exe
-  4. Copia a la carpeta "Adb/"
-
-Estructura final de "Adb/":
-  Adb/
-  ├── adb.exe
-  ├── AdbWinApi.dll
-  ├── AdbWinUsbApi.dll
-  ├── scrcpy.exe
-  ├── scrcpy-noconsole.exe
-  └── ... (otros archivos)
-
-PASO 3: CONFIGURAR EL MÓVIL ANDROID
------------------------------------
-Para que funcione el control remoto:
-  1. Ve a Configuración → Acerca del teléfono
-  2. Toca "Número de compilación" 7 veces (activa Opciones de Desarrollador)
-  3. Ve a Configuración → Opciones de Desarrollador
-  4. Activa "Depuración USB"
-  5. Activa "Depuración USB (seguridad)") si existe
-  6. Conecta el móvil por USB a la PC
-  7. En el móvil, ACEPTA la huella RSA (ventana emergente)
-  8. Para usar por WiFi: 
-     - Conecta móvil por USB
-     - Ejecuta: adb tcpip 5555
-     - Desconecta USB
-     - Conecta por WiFi: adb connect IP_DEL_MÓVIL:5555
-
-PASO 4: EJECUTAR EL PROGRAMA
-----------------------------
+### Paso 4: Ejecutar el programa
 Opción A (Recomendada):
   1. Haz doble clic en "Configurar.bat" (solo la primera vez)
   2. Haz doble clic en "Iniciar.bat"
@@ -214,17 +113,13 @@ Opción B (Manual):
   2. pip install scapy pillow
   3. python main.py
 
-PASO 5: PRIMER USO
-------------------
+### Paso 5: Primer uso
 1. En la pestaña "DISPOSITIVOS", haz clic en "ESCANEAR"
 2. Selecciona tu dispositivo Android de la lista
 3. Haz clic en "SELECCIONAR"
 4. Ve a la pestaña "CONTROL" para probar funciones
 
-
-
 ## ❌ POSIBLES ERRORES Y SOLUCIONES
-
 
 ERROR 1: "ADB no encontrado"
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -259,30 +154,7 @@ ERROR 6: "Error obteniendo gateway"
    - Verifica que tengas conexión a internet
    - El programa usará IP por defecto (192.168.1.1)
 
-
-
-## ⚙️ REQUISITOS DEL SISTEMA: CORRE EN CUALQUIER COSA QUE TENGA PANTALLA IGUAL QUE DOOM!!! (na mentira...)
-
-
-"MÍNIMO":
-  - Windows 7/8/10/11, Linux o Mac
-  - Python 3.7 o superior
-  - 2GB RAM
-  - Conexión WiFi o Ethernet (P3ndejo si tienes esto es porque tienes internet)
-
-RECOMENDADO:
-  - Windows 10/11
-  - Python 3.10+
-  - 4GB RAM
-  - Tarjeta WiFi compatible con modo monitor (para ARP spoofing)
-
-PARA ANDROID:
-  - Android 5.0 o superior 
-  - Depuración USB activada
-
-
 ## 📝 DEPENDENCIAS (qué instala Configurar.bat)
-
 
 - scapy        → Para paquetes ARP (arp spoofing)
 - pillow       → Para procesamiento de imágenes (backups)
@@ -291,9 +163,7 @@ PARA ANDROID:
 - threading    → Para operaciones en segundo plano
 - socket       → Comunicación de red
 
-
 ## 🛡️ CONSEJOS DE SEGURIDAD
-
 
 PARA TÍ:
   1. NO uses esto en dispositivos ajenos sin permiso
@@ -303,19 +173,6 @@ PARA TÍ:
 PARA TUS DISPOSITIVOS :
   1. Desactiva "Depuración USB" cuando no la uses
   2. No conectes tu móvil a WiFi públicas con debugging activado... ¡¡Por obvias razones ctm!!
-
-## 📞 "AYUDA" Y "SOPORTE" 
-
-Si tienes problemas:
-  1. Revisa este archivo, la solución puede estar aquí. (P.D: No va a estar...)
-  2. Verifica que ADB funciona: Abre CMD → adb devices
-  3. Verifica que Python está instalado: python --version
-  4. Ejecuta Configurar.bat de nuevo
-
-ERRORES COMUNES DE ADB:
-  - "device offline" → Rechaza la huella RSA en el móvil
-  - "unauthorized" → No has aceptado la depuración USB
-  - "cannot connect" → Puerto 5555 cerrado o WiFi diferente
 
 ## 📜 NOTA LEGAL
 
@@ -332,11 +189,12 @@ AL USAR ESTA HERRAMIENTA, ACEPTAS:
   ✅ Obtener permiso EXPLÍCITO antes de usar en dispositivos ajenos
   ✅ No utilizarla para actividades ilegales o maliciosas
 
-## ✨ AGRADECIMIENTOS:
+
+## ✨ AGRADECIMIENTOS ESPECIALES:
+
 
 - A mi pc por aguantar mientras hacia el programa
 - A mi pan con queso por darme energía
 - A mi silla
 
-#                   VULKAN-MLG v12.0 - FIN DE LA GUÍA 
-
+# VULKAN-MLG v12.0 - FIN DE LA GUÍA 
