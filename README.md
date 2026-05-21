@@ -1,9 +1,9 @@
-================================================================================
-                        VULKAN-MLG v12.0 - GUÍA COMPLETA
-================================================================================
 
-📌 ¿QUÉ ES VULKAN-MLG?
-================================================================================
+##                       "VULKAN-MLG v12.0 - GUÍA COMPLETA"
+
+
+## **📌 ¿QUÉ ES VULKAN-MLG?**
+
 Es una herramienta para administrar dispositivos Android y PC en una 
 red local. Permite escanear dispositivos, explorar archivos, ejecutar comandos 
 ADB y controlar un teléfono Android. La inventé solo porque quería tener un 
@@ -14,9 +14,7 @@ archivos. Pero... ¿Por que no crear un programa para tener control casi total?
 ⚠️ SOLO para uso en DISPOSITIVOS PROPIOS o con AUTORIZACIÓN EXPLÍCITA.
 
 
-================================================================================
-📁 ESTRUCTURA DEL PROYECTO
-================================================================================
+## 📁 ESTRUCTURA DEL PROYECTO:
 
 Vulkan-MLG-2.1/
 │
@@ -55,9 +53,8 @@ Vulkan-MLG-2.1/
     └── ... (otros archivos no voy a escribir todos uno por uno...)
 
 
-================================================================================
-📋 FUNCIÓN DE CADA ARCHIVO (DETALLADO)
-================================================================================
+
+## 📋 FUNCIÓN DE CADA ARCHIVO 
 
 --------------------- ARCHIVOS PRINCIPALES ---------------------
 
@@ -144,9 +141,9 @@ Vulkan-MLG-2.1/
    → GESTOR DE CONFIGURACIÓN. Guarda y carga ajustes desde config.json.
 
 
-================================================================================
-🚀 QUÉ OFRECE LA APLICACIÓN??? (FUNCIONES "SEMICOMPLETAS." 
-================================================================================
+
+## 🚀 QUÉ OFRECE LA APLICACIÓN??? (FUNCIONES "SEMICOMPLETAS." 
+
 
 1. 📡 PESTAÑA DISPOSITIVOS
    ✅ Escanear red completamente
@@ -196,9 +193,9 @@ Vulkan-MLG-2.1/
    ✅ Comandos peligrosos requieren confirmación
 
 
-================================================================================
-🔧 CÓMO CONFIGURAR TODO (PASO A PASO)
-================================================================================
+
+## 🔧 CÓMO CONFIGURAR TODO (PASO A PASO)
+
 
 PASO 1: INSTALAR PYTHON
 ------------------------
@@ -266,9 +263,9 @@ PASO 5: PRIMER USO
 4. Ve a la pestaña "CONTROL" para probar funciones
 
 
-================================================================================
-❌ POSIBLES ERRORES Y SOLUCIONES
-================================================================================
+
+## ❌ POSIBLES ERRORES Y SOLUCIONES
+
 
 ERROR 1: "ADB no encontrado"
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -304,9 +301,9 @@ ERROR 6: "Error obteniendo gateway"
    - El programa usará IP por defecto (192.168.1.1)
 
 
-================================================================================
-⚙️ REQUISITOS DEL SISTEMA: CORRE EN CUALQUIER COSA QUE TENGA PANTALLA IGUAL QUE DOOM!!! (na mentira...)
-================================================================================
+
+## ⚙️ REQUISITOS DEL SISTEMA: CORRE EN CUALQUIER COSA QUE TENGA PANTALLA IGUAL QUE DOOM!!! (na mentira...)
+
 
 "MÍNIMO":
   - Windows 7/8/10/11, Linux o Mac
@@ -324,9 +321,9 @@ PARA ANDROID:
   - Android 5.0 o superior 
   - Depuración USB activada
 
-================================================================================
-📝 DEPENDENCIAS (qué instala Configurar.bat)
-================================================================================
+
+## 📝 DEPENDENCIAS (qué instala Configurar.bat)
+
 
 - scapy        → Para paquetes ARP (arp spoofing)
 - pillow       → Para procesamiento de imágenes (backups)
@@ -336,9 +333,8 @@ PARA ANDROID:
 - socket       → Comunicación de red
 
 
-================================================================================
-🛡️ CONSEJOS DE SEGURIDAD
-================================================================================
+## 🛡️ CONSEJOS DE SEGURIDAD
+
 
 PARA TÍ:
   1. NO uses esto en dispositivos ajenos sin permiso
@@ -349,9 +345,7 @@ PARA TUS DISPOSITIVOS :
   1. Desactiva "Depuración USB" cuando no la uses
   2. No conectes tu móvil a WiFi públicas con debugging activado... ¡¡Por obvias razones ctm!!
 
-================================================================================
-📞 "AYUDA" Y "SOPORTE" 
-================================================================================
+## 📞 "AYUDA" Y "SOPORTE" 
 
 Si tienes problemas:
   1. Revisa este archivo, la solución puede estar aquí. (P.D: No va a estar...)
@@ -364,12 +358,9 @@ ERRORES COMUNES DE ADB:
   - "unauthorized" → No has aceptado la depuración USB
   - "cannot connect" → Puerto 5555 cerrado o WiFi diferente
 
+## 📜 NOTA LEGAL
 
-================================================================================
-📜 NOTA LEGAL
-================================================================================
-
-ESTE SOFTWARE ES SOLO PARA FINES """"""""EDUCATIVOS"""""""".
+ESTE SOFTWARE ES SOLO PARA FINES "EDUCATIVOS".
 
 El autor NO se responsabiliza por:
   - Uso indebido de la herramienta
@@ -382,14 +373,11 @@ AL USAR ESTA HERRAMIENTA, ACEPTAS:
   ✅ Obtener permiso EXPLÍCITO antes de usar en dispositivos ajenos
   ✅ No utilizarla para actividades ilegales o maliciosas
 
-================================================================================
-✨ AGRADECIMIENTOS:
-================================================================================
+## ✨ AGRADECIMIENTOS:
 
 - A mi pc por aguantar mientras hacia el programa
 - A mi pan con queso por darme energía
 - A mi silla
 
-================================================================================
-                   VULKAN-MLG v12.0 - FIN DE LA GUÍA "INSERVIBLE"
-================================================================================
+#                   VULKAN-MLG v12.0 - FIN DE LA GUÍA 
+
