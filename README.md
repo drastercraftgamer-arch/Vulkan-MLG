@@ -101,7 +101,7 @@ archivos. Pero... ¿Por que no crear un programa para tener control casi total?
 
 
 
-## 🚀 QUÉ OFRECE LA APLICACIÓN??? (FUNCIONES "SEMICOMPLETAS." 
+## 🚀 ¿QUÉ OFRECE LA APLICACIÓN? 
 
 
 1. 📡 PESTAÑA DISPOSITIVOS
