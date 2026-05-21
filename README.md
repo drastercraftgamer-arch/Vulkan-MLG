@@ -13,47 +13,6 @@ archivos. Pero... ¿Por que no crear un programa para tener control casi total?
 
 ⚠️ SOLO para uso en DISPOSITIVOS PROPIOS o con AUTORIZACIÓN EXPLÍCITA.
 
-
-## 📁 ESTRUCTURA DEL PROYECTO:
-
-Vulkan-MLG-2.1/
-│
-├── main.py                 → PUNTO DE ENTRADA (inicia la aplicación)
-├── Iniciar.bat            → Script para Windows (inicia el programa sin tener que usar la consola)
-├── Configurar.bat         → Script para instalar dependencias
-├── config.json            → Configuración guardada (dispositivos, ajustes)
-├── LÉEME CTM, SOY...txt   → Este archivo que estás leyendo ¿no sabes leer?  
-│
-├── core/                  → NÚCLEO DE FUNCIONALIDADES
-│   ├── __init__.py        → Marca la carpeta como paquete Python
-│   ├── vulkan_core.py     → Controlador principal (conecta todo)
-│   ├── network_scanner.py → Escáner de red (encuentra dispositivos)
-│   ├── adb_controller.py  → Controlador ADB ("habla" con android)
-│   ├── arp_spoofer.py     → ARP spoofing (bloqueo de red)
-│   └── security_manager.py → Gestor de seguridad (opcional)
-│
-├── ui/                    → INTERFAZ DE USUARIO
-│   ├── __init__.py        → Marca la carpeta como paquete Python
-│   ├── modern_ui.py       → Ventanas y botones (la interfaz visual)
-│   └── styles.py          → Colores y estilos
-│
-├── tools/                 → HERRAMIENTAS ESPECÍFICAS
-│   ├── __init__.py        → Marca la carpeta como paquete Python
-│   ├── file_explorer.py   → Explorador de archivos (PC y Android)
-│   └── spy_tools.py       → Herramientas de espionaje (foto, GPS, etc.)
-│
-├── utils/                 → UTILIDADES
-│   ├── __init__.py        → Marca la carpeta como paquete Python
-│   ├── logger.py          → Sistema de logs (muestra mensajes)
-│   └── config.py          → Gestor de configuración (lee guarda ajustes)
-│
-└── Adb/                   → HERRAMIENTAS EXTERNAS
-    ├── adb.exe            → ADB (Android Debug Bridge)
-    ├── scrcpy.exe         → Scrcpy (ver pantalla del móvil)
-    └── ... (otros archivos no voy a escribir todos uno por uno...)
-
-
-
 ## 📋 FUNCIÓN DE CADA ARCHIVO 
 
 --------------------- ARCHIVOS PRINCIPALES ---------------------
